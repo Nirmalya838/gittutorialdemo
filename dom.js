@@ -38,7 +38,7 @@ function savedata(event)
     {   
         let parentElem= document.getElementById("listOfitems");
         let childElem = document.createElement("li");
-        childElem.textContent = cli.firstname + "-" + cli.city + "-" + cli.date
+        childElem.textContent = cli.firstname + "-" + cli.city + "-" + cli.date + "-" + cli.phone
         parentElem.appendChild(childElem);
         
         let deletebutton = document.createElement("input");
@@ -47,9 +47,18 @@ function savedata(event)
         deletebutton.onclick = () => {
             localStorage.removeItem(cli.email);
             parentElem.removeChild(childElem);
-
         }
+        let editbutton = document.createElement("input")
+        editbutton.type = "button";
+        editbutton.value = "Edit";
+        editbutton.onclick = () => {
+            localStorage.removeItem(cli.phone)
+            parentElem.removeChild(childElem)
+            document.getElementById("phoneInputTag").value = cli.phone
+        }
+        
         childElem.appendChild(deletebutton)
+        childElem.appendChild(editbutton)
         parentElem.appendChild(childElem)
     }
 }
