@@ -1,48 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>JS For Beginners</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOokingly</title>
+    <link rel="icon" type="image/x-icon" href="BOokingly_img\favicon.ico">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>JS For Beginners</h1>
-    </header>
-
-    <section class="container">
-      <form id="my-form" onsubmit="saveToLocalStorage(event)">
-        <h1>Add User</h1>
-        <div class="msg"></div>
-        <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="username" required>
-        </div>
-        <div>
-          <label for="email">Email:</label>
-          <input type="text" id="email" name="emailId" required>
-        </div>
-        <div>
-            <label for="phone">Phone Number:</label>
-            <input type="text" id="phone" name="phonenumber" required>
-        </div>
-        <div>
-        <input class="btn" type="submit" value="Submit">
-        </div>
-      </form>
-
-      <ul id="users"></ul>
-
-      <!-- <ul class="items">
-        <li class="item">Item 1</li>
-        <li class="item">Item 2</li>
-        <li class="item">Item 3</li>
-      </ul> -->
-    </section>
+</head>
+<body>
     
-
-    <script src="main.js"></script>
-  </body>
+    <h1 class="heading">Book Your Room </h1> <hr>
+    <p class="heading">Enjoy Your best <b>comfort</b> with us</p>
+    <form action="thank.html" class="format" onsubmit="savedata(event)">
+        <Label class="lab">Name:</Label> <br>
+        <input type="text" placeholder="First" name="fname" class="detail" required>
+        <input type="text" placeholder="Last" name="lname" class="detail" required> <br><br>
+        <Label class="lab">Permanent Address:</Label> <br>
+        <input type="text" placeholder="Street Address" name="add" class="detail" required>
+        <input type="text" placeholder="City" name="city" class="detail" required> <br><br>
+        <input type="text" placeholder="State" name="state" class="detail" required>
+        <input type="text" placeholder="Pincode" name="pin" class="detail" required><br><br>
+        <label class="lab">Phone</label> <br>
+        <input type="phone" placeholder="##### #####" name="ph" class="id"> <br><br>
+        <label for="" class="lab">Date:</label><br>
+        <input type="date" name="date" class="id"> <br><br>
+        <input type="submit" class="butt" value="Book Now">
+    </form>
+    <ul id="listOfitems"></ul>
+    <script src="dom.js"></script>
+    
+</body>
 </html>
